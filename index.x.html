@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!--[if IE]>
+	<script>
+		//alert(1);
+		</script>
+	<![endif]-->
+	<!--[if IE]>
+	<div>111111111111111</div>
+	<![endif]-->
+	<select name="" id="selectdd">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+	</select>
+	<input type="button" id="bt">aaa</body>
+	<script type="text/javascript">
+		var s,b;
+	window.onload= function(){
+		s = document.getElementById("selectdd");
+		b = document.getElementById("bt");
+		// s.attachEvent("onchange", function(){
+		// 	alert(s.value);
+		// });
+		s.onchange=function(){
+			alert(this.value);
+		};
+		b.onclick=function() {
+			s.selectedIndex = 2;
+			s.onchange();
+		}
+	
+		// var fn = function(){};
+		// if (typeof(s.addEventListener) != "undefined") {
+		// 	s.addEventListener("change", fn);
+		// } else if (s.attachEvent) {
+		// 	s.attachEvent("onchange", fn);
+		// } else {
+		// 	s.onchange = fn;
+		// }
+	}
+	</script>
+</body>
+</html>
